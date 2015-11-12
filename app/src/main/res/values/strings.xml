@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SwipeWiz</string>
+    <string name="strCardNum">Credit Card #</string>
+    <string name="strSaveCard">Save Card</string>
+    <string name="strBillDate">Billing Date</string>
+    <string name="strCardName">Card Name</string>
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCardName"
+        android:maxLength="25"
+        android:ems="12"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:hint="@string/strCardName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCardNum"
+        android:inputType="number"
+        android:maxLength="16"
+        android:ems="12"
+        android:hint="@string/strCardNum"
+        android:layout_below="@+id/txtCardName"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@+id/txtCardName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/txtBillDate"
+        android:ems="2"
+        android:maxLength="2"
+        android:hint="@string/strBillDate"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/txtCardNum"
+        android:layout_alignLeft="@+id/txtCardNum" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strSaveCard"
+        android:id="@+id/btnSaveCard"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/txtBillDate"
+        android:layout_centerHorizontal="true" />
+<!--
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSaveCard"
+        android:scrollbars="none"
+        android:id="@+id/savedCardsScrollView">
+
+                <TableLayout
+                    android:id="@+id/tblSavedCards"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:isScrollContainer="true">
+
+                    <TableRow
+                        android:id="@+id/headerRow"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView android:background="@drawable/cell_shape" android:textColor="@color/black" android:textStyle="bold" android:id="@+id/headerCell1"
+                            android:text="Card Name" android:layout_weight="1" />
+                        <TextView android:background="@drawable/cell_shape" android:textColor="@color/black" android:textStyle="bold" android:id="@+id/headerCell2"
+                            android:text="Billing Date" android:layout_weight="1" />
+            </TableRow>
+        </TableLayout>
+
+    </ScrollView>
+    -->
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lstSavedCards"
+        android:layout_below="@+id/btnSaveCard"
+        android:layout_centerHorizontal="true"
+        android:choiceMode="singleChoice"
+        android:background="#929292"
+        android:focusableInTouchMode="true" />
+
+
+</RelativeLayout>
